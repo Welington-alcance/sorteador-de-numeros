@@ -22,8 +22,16 @@ function sortear(){
         return;
     }
 
+    let numeroGerado;
+
     for(let i = 0; i < quantidade; i++){
-        NumerosSorteados.push(geradorNumero(possibilidades));
+        numeroGerado = (geradorNumero(possibilidades));
+
+        while(NumerosSorteados.includes(numeroGerado)){
+            numeroGerado = (geradorNumero(possibilidades));
+        }
+
+        NumerosSorteados.push(numeroGerado);
     }
 
     exibirTela();
