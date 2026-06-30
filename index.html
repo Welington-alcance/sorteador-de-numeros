@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sorteador de Números</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="container__informacoes">
+
+            <h1>
+                Sorteador
+                <span>de Números</span>
+            </h1>
+
+            <div class="container__campo">
+                <label for="quantidade">Quantidade de números</label>
+                <input
+                    class="container__input"
+                    id="quantidade"
+                    type="number"
+                    min="1"
+                    placeholder="Ex: 5">
+            </div>
+
+            <div class="container__campo">
+                <label for="de">Número inicial</label>
+                <input
+                    class="container__input"
+                    id="de"
+                    type="number"
+                    min="1"
+                    placeholder="Ex: 1">
+            </div>
+
+            <div class="container__campo">
+                <label for="ate">Número final</label>
+                <input
+                    class="container__input"
+                    id="ate"
+                    type="number"
+                    min="1"
+                    placeholder="Ex: 100">
+            </div>
+
+            <div class="container__botoes">
+                <button
+                    onclick="sortear()"
+                    id="btn-sortear"
+                    class="container__botao">
+                    Sortear
+                </button>
+
+                <button
+                    onclick="reiniciar()"
+                    id="btn-reiniciar"
+                    class="container__botao-desabilitado">
+                    Reiniciar
+                </button>
+            </div>
+
+            <div id="resultado" class="resultado">
+                <p>Números sorteados:</p>
+                <span>nenhum até agora</span>
+            </div>
+
+        </div>
+
+        <div class="container__imagem">
+            <img src="./img/ia.png" alt="Astronauta">
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
